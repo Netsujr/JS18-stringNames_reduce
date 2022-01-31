@@ -1,7 +1,7 @@
 const timeNodes = Array.from(document.querySelectorAll('[data-time]'))
 const total = document.getElementById('total');
-timeNodes.map(node => node.textContent += `: ${node.dataset.time}`);
-console.log(total);
+timeNodes.map(node => node.textContent += ` || ${node.dataset.time}`);
+// console.log(total);
 
 
 const seconds = timeNodes
@@ -22,8 +22,8 @@ secondsLeft = secondsLeft % 60;
 
 
 // console.log(mins);
-console.log(hours, mins, secondsLeft);
-console.log(seconds);
+// console.log(hours, mins, secondsLeft);
+// console.log(seconds);
 // console.log(secondsLeft);
 
 total.textContent += `${hours}:${mins}:${secondsLeft}`;
