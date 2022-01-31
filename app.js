@@ -1,6 +1,7 @@
 const timeNodes = Array.from(document.querySelectorAll('[data-time]'))
 const total = document.getElementById('total');
-timeNodes.map(node => node.textContent += ` || ${node.dataset.time}`);
+
+timeNodes.map(node => node.textContent += ` - ${(node.dataset.time)}`);
 // console.log(total);
 
 
