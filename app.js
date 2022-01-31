@@ -7,10 +7,19 @@ const seconds = timeNodes
   .map(timeCode => {
     const [mins, secs] = timeCode.split(':').map(parseFloat);
     return (mins * 60) + secs;
-    console.log(mins, secs);
+    // console.log(mins, secs);
 
-  }).reduce((total, videoSeconds) => total + videoSeconds)
-  ;
+  }).reduce((total, videoSeconds) => total + videoSeconds);
+
+  let secondsLeft = seconds;
+  const hours = Math.floor(secondsLeft / 3600);
+  secondsLeft = secondsLeft % 3600;
+
+  const mins = Math.floor(secondsLeft / 60);
+  secondsLeft = secondsLeft % 60;
 
 
-console.log(seconds);
+// console.log(mins);
+  console.log(hours, mins, secondsLeft);
+  console.log(seconds);
+  // console.log(secondsLeft);
